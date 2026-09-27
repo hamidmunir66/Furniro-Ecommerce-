@@ -2,29 +2,37 @@ import hero_bg from "../../assets/main_banner.jpg";
 
 const Hero = () => {
   return (
-    <>
-      <main className="w-full relative ">
-        <img src={hero_bg} alt="" className="object-center" />
-        <div className={`bg-[#FFF3E3] w-2xl absolute right-28 top-96 m-5 px-8 py-16`}>
-          <h5>New Arrival</h5>
-          <h1 className="text-4xl my-3 text-[#B98E2F] font-bold">
-            Discover Our{" "}
+    <main
+      className="relative min-h-[500px] md:min-h-[600px] bg-cover bg-center"
+      style={{ backgroundImage: `url(${hero_bg})` }}
+    >
+      {/* Content */}
+      <div className="absolute inset-0 flex items-center justify-center md:justify-end px-5 md:px-10 lg:px-20">
+        <div className="bg-[#FFF3E3] w-full max-w-xl p-8 md:p-12 lg:p-16">
+          <h5 className="text-sm md:text-base">
+            New Arrival
+          </h5>
+
+          <h1 className="text-3xl md:text-4xl lg:text-5xl my-3 text-[#B98E2F] font-bold">
+            Discover Our
           </h1>
-          <h1 className="text-4xl my-3 text-[#B98E2F] font-bold">
+
+          <h1 className="text-3xl md:text-4xl lg:text-5xl my-3 text-[#B98E2F] font-bold">
             New Collection
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-            repellendus deserunt repudiandae deleniti? Error cumque quas
+
+          <p className="text-sm md:text-base leading-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Aut repellendus deserunt repudiandae deleniti? Error
+            cumque quas.
           </p>
-          <div className="bg-[#B98E2F] p-4 w-36 items-center mt-8 ">
-            <button className="  text-[#FFF3E3] cursor-pointer font-semibold ">
-              Buy Now
-            </button>
-          </div>
+
+          <button className="bg-[#B98E2F] text-[#FFF3E3] px-6 py-4 mt-8 font-semibold cursor-pointer hover:bg-[#a17b27] transition">
+            Buy Now
+          </button>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 

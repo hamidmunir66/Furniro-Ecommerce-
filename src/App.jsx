@@ -1,8 +1,7 @@
-
-
 import BrowseSection from "./component/browse/BrowseSection";
 import Navbar from "./component/header/Navbar";
 import Hero from "./component/hero/Hero";
+import Products from "./component/products/Products";
 
 const App = () => {
   return (
@@ -11,7 +10,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <BrowseSection />
-        
+        <Products />
       </div>
     </>
   );
