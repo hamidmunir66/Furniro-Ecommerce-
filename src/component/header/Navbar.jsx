@@ -6,6 +6,7 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 import { IoMenu, IoClose } from "react-icons/io5";
 
 import useToggle from "../../hooks/useToggle";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useToggle(false);
@@ -13,7 +14,6 @@ const Navbar = () => {
   return (
     <header className="w-full overflow-hidden">
       <nav className="flex items-center justify-between mx-5 md:mx-8 my-4">
-        
         <div className="flex items-center font-bold text-2xl md:ml-12 cursor-pointer">
           <FaHome className="mr-1" />
           <h1>Furniro</h1>
@@ -29,19 +29,16 @@ const Navbar = () => {
           </ul>
         </div>
 
-        
         <div className="hidden md:flex items-center mr-18 text-2xl">
-          <MdOutlinePersonOutline className="mr-4 cursor-pointer" />
+          <Link to="/login">
+            <MdOutlinePersonOutline className="mr-4 cursor-pointer" />
+          </Link>
           <FiSearch className="mr-4 cursor-pointer" />
           <CiHeart className="mr-4 cursor-pointer" />
           <IoCartOutline className="mr-4 cursor-pointer" />
         </div>
 
-      
-        <button
-          onClick={() => setToggle(!toggle)}
-          className="md:hidden text-3xl"
-        >
+        <button onClick={setToggle} className="md:hidden text-3xl">
           {toggle ? <IoClose /> : <IoMenu />}
         </button>
       </nav>
@@ -56,9 +53,10 @@ const Navbar = () => {
             <li className="cursor-pointer">Contact</li>
           </ul>
 
-          
           <div className="flex items-center text-2xl mt-5">
-            <MdOutlinePersonOutline className="mr-5 cursor-pointer" />
+            <Link to="/login">
+              <MdOutlinePersonOutline className="mr-5 cursor-pointer" />
+            </Link>
             <FiSearch className="mr-5 cursor-pointer" />
             <CiHeart className="mr-5 cursor-pointer" />
             <IoCartOutline className="cursor-pointer" />

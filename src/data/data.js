@@ -10,6 +10,17 @@ import sofa4 from "../assets/products/sofa4.jpg";
 import bed from "../assets/products/bed.jpg";
 import bed2 from "../assets/products/bed2.jpg";
 import bed3 from "../assets/products/bed3.jpg";
+import room1 from "../assets/room1.jpg";
+import room2 from "../assets/room2.jpg";
+import room3 from "../assets/room3.jpg";
+import room4 from "../assets/room4.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.jpg";
+import image5 from "../assets/image5.jpg";
+import image6 from "../assets/image6.jpg";
+import image7 from "../assets/image7.jpg";
+import image8 from "../assets/image8.jpg";
+
 
 
 export const browsecard = [
@@ -114,4 +125,78 @@ export const productData = [
     discount: 30,
   },
  
+];
+
+export const rooms = [
+  {
+    id: 1,
+    image: room1,
+    category: "01 — Bed Room",
+    title: "Inner Peace",
+  },
+  {
+    id: 2,
+    image: room2,
+    category: "02 — Dining Room",
+    title: "Modern Dining",
+  },
+  {
+    id: 3,
+    image: room3,
+    category: "03 — Living Room",
+    title: "Cozy Living",
+  },
+  {
+    id: 4,
+    image: room4,
+    category: "04 — TV Launge",
+    title: "Furnish ",
+  },
+];
+export const galleryImages = [
+  {
+    id: 1,
+    img: room1,
+    className: "gallery-item gallery-1"
+  },
+  {
+    id: 2,
+    img: image2,
+    className: "gallery-item gallery-2"
+  },
+  {
+    id: 3,
+    img: room3,
+    className: "gallery-item gallery-3"
+  },
+  {
+    id: 4,
+    img: room4,
+    className: "gallery-item gallery-4"
+  },
+  {
+    id: 5,
+    img: image5,
+    className: "gallery-item gallery-5"
+  },
+  {
+    id: 6,
+    img: dining,
+    className: "gallery-item gallery-6"
+  },
+  {
+    id: 7,
+    img: image7,
+    className: "gallery-item gallery-7"
+  },
+  {
+    id: 8,
+    img: image8,
+    className: "gallery-item gallery-8"
+  },
+  {
+    id: 9,
+    img: image3,
+    className: "gallery-item gallery-9"
+  },
 ];
