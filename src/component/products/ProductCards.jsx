@@ -1,4 +1,11 @@
+import { addItem } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
 const ProductCards = ({ item }) => {
+  const dispatch = useDispatch();
+  const handleAddItem = (item) => {
+    console.log(item);
+    dispatch(addItem(item));
+  };
   return (
     <>
       <div className="group relative overflow-hidden bg-gray-100">
@@ -17,7 +24,10 @@ const ProductCards = ({ item }) => {
 
           {/* Hover overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 transition duration-300 group-hover:opacity-100">
-            <button className="bg-white px-10 py-4 font-semibold text-yellow-600 cursor-pointer">
+            <button
+              onClick={()=>handleAddItem(item)}
+              className="bg-white px-10 py-4 font-semibold text-yellow-600 cursor-pointer"
+            >
               Add to cart
             </button>
 

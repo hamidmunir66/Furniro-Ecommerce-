@@ -1,28 +1,65 @@
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { FaHome } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import { useState } from "react";
 
 const Login = () => {
+  const [users] = useLocalStorage("users", []);
+  const [,setcurrentuser] = useLocalStorage("currentUser", null);
+  const [message, setmessage] = useState("");
+  const [success, setsuccess] = useState(false);
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
-    watch,
+    control,
     formState: { errors },
   } = useForm();
-  const password = watch("password");
+  const password = useWatch({
+    control,
+    name: "password",
+  });
+  const onSubmit = (data) => {
+    const user = users.find(
+      (item) => item.email === data.email && item.password === data.password,
+    );
+    if (user) {
+      setsuccess(true);
+      setmessage("Login Succesfull");
+      setcurrentuser(user);
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+    } else {
+      setsuccess(false);
+      setmessage("Invalid email or password");
+    }
+    console.log(data);
+  };
   return (
     <>
       <div className="min-h-screen bg-[#FFF3E3] flex items-center justify-center px-4 py-10">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 md:p-10">
-          <Link to='/'>
+          <Link to="/">
             <FaHome className="text-2xl" />
           </Link>
+          {message && (
+            <p
+              className={`text-center text-sm font-medium ${
+                success ? "text-green-600" : "text-red-500"
+              }`}
+            >
+              {message}
+            </p>
+          )}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-[#B98E2F]">Welcome Back</h1>
 
             <p className="text-gray-500 mt-2">Login to your Furniro account</p>
           </div>
-          <form onSubmit={handleSubmit()} className="space-y-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <div>
               <label className="block mb-2 font-medium text-gray-700">
                 Email
@@ -48,7 +85,7 @@ const Login = () => {
             </div>
             <div>
               <label className="block mb-2 font-medium text-gray-700">
-                Email
+                Password
               </label>
               <input
                 type="password"

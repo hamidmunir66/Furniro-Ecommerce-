@@ -17,11 +17,9 @@ import room4 from "../assets/room4.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
 import image5 from "../assets/image5.jpg";
-import image6 from "../assets/image6.jpg";
+
 import image7 from "../assets/image7.jpg";
 import image8 from "../assets/image8.jpg";
-
-
 
 export const browsecard = [
   {
@@ -39,92 +37,89 @@ export const browsecard = [
 ];
 export const productData = [
   {
-    id:1,
+    id: 1,
     img: chair,
     heading: "Chair",
     description: "fully leather cover",
     category: "new",
-    price: "4,350,000",
-    oldPrice: "5,500,000",
+    price: 4350000,
+    oldPrice: 5500000,
     discount: 30,
   },
   {
-     id:2,
+    id: 2,
     img: chair2,
     heading: "Chair",
     description: "fully leather cover",
     category: "new",
-     price: "5,350,000",
-    oldPrice: "8,500,000",
+    price: 5350000,
+    oldPrice: 8500000,
     discount: 40,
   },
   {
-     id:3,
+    id: 3,
     img: sofa,
     heading: "sofa",
     description: "fully leather cover",
     category: "new",
-    price: "2,350,000",
-    oldPrice: "3,500,000",
+    price: 2350000,
+    oldPrice: 3500000,
     discount: 20,
   },
   {
-     id:4,
+    id: 4,
     img: sofa2,
     heading: "Sofa",
     description: "fully leather cover",
     category: "new",
-    price: "4,350,000",
-    
+    price: 4350000,
   },
   {
-     id:5,
+    id: 5,
     img: sofa3,
     heading: "sofa",
     description: "fully leather cover",
     category: "new",
-     price: "4,350,000",
-    
+    price: 4350000,
   },
   {
-     id:6,
+    id: 6,
     img: sofa4,
     heading: "Sofa",
     description: "fully leather cover",
     category: "new",
-     price: "5,350,000",
-    oldPrice: "3,500,000",
+    price: 5350000,
+    oldPrice: 3500000,
     discount: 30,
   },
   {
-     id:7,
+    id: 7,
     img: bed,
     heading: "Bed",
     description: "fully leather cover",
     category: "new",
-    price: "35000",
+    price: 35000,
   },
   {
-     id:8,
+    id: 8,
     img: bed2,
     heading: "bed",
     description: "fully leather cover",
     category: "new",
-     price: "3,350,000",
-    oldPrice: "5,500,000",
+    price: 3350000,
+    oldPrice: 5500000,
     discount: 30,
   },
   {
-     id:8,
+    id: 9,
     img: bed3,
     heading: "bed",
     description: "fully leather cover",
     category: "new",
-     price: "3,350,000",
-    oldPrice: "5,500,000",
+    price: 3350000,
+    oldPrice: 5500000,
     discount: 30,
   },
- 
 ];
 
 export const rooms = [
@@ -157,46 +152,46 @@ export const galleryImages = [
   {
     id: 1,
     img: room1,
-    className: "gallery-item gallery-1"
+    className: "gallery-item gallery-1",
   },
   {
     id: 2,
     img: image2,
-    className: "gallery-item gallery-2"
+    className: "gallery-item gallery-2",
   },
   {
     id: 3,
     img: room3,
-    className: "gallery-item gallery-3"
+    className: "gallery-item gallery-3",
   },
   {
     id: 4,
     img: room4,
-    className: "gallery-item gallery-4"
+    className: "gallery-item gallery-4",
   },
   {
     id: 5,
     img: image5,
-    className: "gallery-item gallery-5"
+    className: "gallery-item gallery-5",
   },
   {
     id: 6,
     img: dining,
-    className: "gallery-item gallery-6"
+    className: "gallery-item gallery-6",
   },
   {
     id: 7,
     img: image7,
-    className: "gallery-item gallery-7"
+    className: "gallery-item gallery-7",
   },
   {
     id: 8,
     img: image8,
-    className: "gallery-item gallery-8"
+    className: "gallery-item gallery-8",
   },
   {
     id: 9,
     img: image3,
-    className: "gallery-item gallery-9"
+    className: "gallery-item gallery-9",
   },
 ];
